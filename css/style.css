@@ -43,6 +43,13 @@ span {
     margin-right: 20px;
 }
 
+/* Highlight the active tab */
+.nav-links .active {
+    color: pink; /* Highlight color */
+    font-weight: bold; /* Optional: make it bold to indicate active */
+    border-bottom: 2px solid pink; /* Optional underline */
+}
+
 a {
     text-decoration: none;
     font-size: 18px;
