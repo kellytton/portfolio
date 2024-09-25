@@ -158,11 +158,23 @@ a {
     .main .introduction-text {
         margin-bottom: 20px;
     }
+    
+    /* Typing Effect specific to smaller screens */
     .typing {
         border-right: 5px solid;
-        width: 100%;
+        width: 6ch; /* Width for "kelly." */
         white-space: nowrap;
         overflow: hidden;
-        animation: typing 1.3s steps(7), cursor .5s step-end infinite alternate;
+        animation: typing-small 1.3s steps(6), cursor .5s step-end infinite alternate;
+    }
+}
+
+/* Keyframe for Typing on Small Screens */
+@keyframes typing-small {
+    from {
+        width: 0;
+    }
+    to {
+        width: 6ch; /* Matches the width of "kelly." */
     }
 }
