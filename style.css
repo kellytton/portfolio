@@ -14,6 +14,65 @@ body {
     background: linear-gradient(45deg, #593C8F, #322E18);
     background-size: 400% 400%;
     animation: gradient 12s ease infinite;
+    font-family: 'Ubuntu Mono', monospace, sans-serif; /* Set the font for body text */
+    color: white;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.site-name h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.site-name span {
+    color: pink;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+/* Main content Flexbox */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    flex-grow: 1;
+}
+
+.introduction-text {
+    background-color: pink;
+    flex: 1;
+    font-size: 18px;
+    margin-left: 10%;
+}
+
+.introduction-text h1 {
+    font-size: 400%;
+    margin: 10px 0;
+}
+
+.bedroom-image img {
+    background-color: aqua;
+    width: 400px;
+    height: auto;
+    margin-right: 10%;
 }
 
 @keyframes gradient {
@@ -29,72 +88,4 @@ body {
         background-position: 0% 50%;
         background-color: #593C8F, #322E18;
     }
-}
-
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.site-name h1 {
-    margin-left: 20px;
-    font-size: 24px;
-}
-
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    margin-right: 20px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #333;
-}
-
-/* Main content Flexbox */
-.main {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    flex-grow: 1;
-}
-
-.introduction-text {
-    flex: 1;
-    font-size: 18px;
-}
-
-.introduction-text h1 {
-    font-size: 36px;
-    margin: 10px 0;
-}
-
-.bedroom-image img {
-    width: 400px;
-    height: auto;
-    border-radius: 10px;
-}
-
-/* differentiation purposes */
-
-.site-name {
-    background-color: lightpink;
-}
-
-.nav {
-    background-color: lightgreen;
-}
-
-.bedroom-image {
-    background-color: lightseagreen;
-}
-
-.introduction-text {
-    background-color: pink;
 }
