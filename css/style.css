@@ -43,10 +43,25 @@ span {
     margin-right: 20px;
 }
 
-.nav-links a {
+a {
     text-decoration: none;
     font-size: 18px;
     color: white;
+}
+
+.navbar a {
+    transition: all .05s ease;
+}
+
+.navbar a:hover {
+    color: pink;
+    font-size: 20px;
+}
+
+/* Hamburger icon styles */
+.toggle_btn {
+    display: none; /* Hide by default */
+    cursor: pointer;
 }
 
 /* Main content Flexbox */
@@ -59,10 +74,22 @@ span {
     flex-grow: 1;
 }
 
+.main .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.contact a {
+    color: white; /* Make sure the icons are visible */
+    font-size: 24px;
+}
+
 .introduction-text {
     flex: 0;
     font-size: 180%;
-    margin-left: 10%;
+    margin-left: 2%;
     margin-right: 30px; /* Space between text and image */
 }
 
@@ -77,9 +104,7 @@ span {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation:
-        typing 1.1s steps(6),
-        cursor .4s step-end infinite alternate;
+    animation: typing 1.1s steps(6), cursor .5s step-end infinite alternate;
 }
 
 .bedroom-image img {
@@ -115,9 +140,4 @@ span {
     from {
         width: 0;
     }
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    
 }
