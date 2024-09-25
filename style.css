@@ -1,3 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(45deg, #593C8F, #322E18);
+    background-size: 400% 400%;
+    animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        background-color: #593C8F, #322E18;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color: #E39FF6, #8A80E5;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-color: #593C8F, #322E18;
+    }
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.site-name h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+}
+
+/* Main content Flexbox */
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    flex-grow: 1;
+}
+
+.introduction-text {
+    flex: 1;
+    font-size: 18px;
+}
+
+.introduction-text h1 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.bedroom-image img {
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* differentiation purposes */
+
+.site-name {
+    background-color: lightpink;
+}
+
+.nav {
+    background-color: lightgreen;
+}
+
+.bedroom-image {
+    background-color: lightseagreen;
+}
+
+.introduction-text {
     background-color: pink;
 }
