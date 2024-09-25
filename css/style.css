@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Ubuntu Mono', monospace, sans-serif;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden; /* Prevent scrolling */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    background: linear-gradient(45deg, #593C8F, #322E18);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    color: white;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.site-name h1 {
+    margin-left: 20px;
+    font-size: 24px;
+}
+
+span {
+    color: pink;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white;
+}
+
+.navbar a {
+    transition: all .05s ease;
+}
+
+.navbar a:hover {
+    color: pink;
+    font-size: 20px;
+}
+
+.contact a:hover {
+    color: pink;
+}
+
+/* Main content Flexbox */
+.main {
+    display: flex;
+    justify-content: center; /* Center the main content horizontally */
+    align-items: center;
+    padding: 40px;
+    width: 100%; /* Full width */
+    flex-grow: 1;
+}
+
+.main .contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px; /* Space between icons */
+}
+
+.contact a {
+    color: white; /* Make sure the icons are visible */
+    font-size: 24px;
+}
+
+.introduction-text {
+    flex: 0;
+    font-size: 180%;
+    margin-left: 2%;
+    margin-right: 30px; /* Space between text and image */
+}
+
+.introduction-text h1 {
+    font-family: "Courier Prime", sans-serif;
+    font-size: 400%;
+    margin: 10px 0;
+}
+
+.typing {
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 1.1s steps(6), cursor .5s step-end infinite alternate;
+}
+
+.bedroom-image img {
+    height: auto;
+    margin-right: 10%;
+}
+
+/* Background gradient */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        background-color: #593C8F, #322E18;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color: #E39FF6, #8A80E5;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-color: #593C8F, #322E18;
+    }
+}
+
+/* Cursor blinking */
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 1098px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .main .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px; /* Space between icons */
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .main .introduction-text {
+        margin-bottom: 20px;
+    }
+    
+    /* Typing Effect specific to smaller screens */
+    .typing {
+        border-right: 5px solid;
+        width: 6ch; /* Width for "kelly." */
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing-small 1.3s steps(6), cursor .5s step-end infinite alternate;
+    }
+}
+
+/* Keyframe for Typing on Small Screens */
+@keyframes typing-small {
+    from {
+        width: 0;
+    }
+    to {
+        width: 6ch; /* Matches the width of "kelly." */
+    }
+}
