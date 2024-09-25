@@ -5,20 +5,22 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Ubuntu Mono', monospace, sans-serif;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
+    overflow: hidden; /* Prevent scrolling */
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
     background: linear-gradient(45deg, #593C8F, #322E18);
     background-size: 400% 400%;
     animation: gradient 12s ease infinite;
-    font-family: 'Ubuntu Mono', monospace, sans-serif; /* Set the font for body text */
     color: white;
 }
 
 .navbar {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,14 +32,14 @@ body {
     font-size: 24px;
 }
 
-.site-name span {
+span {
     color: pink;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 20px;
+    gap: 30px;
     margin-right: 20px;
 }
 
@@ -50,31 +52,42 @@ body {
 /* Main content Flexbox */
 .main {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the main content horizontally */
     align-items: center;
     padding: 40px;
+    width: 100%; /* Full width */
     flex-grow: 1;
 }
 
 .introduction-text {
-    background-color: pink;
-    flex: 1;
-    font-size: 18px;
+    flex: 0;
+    font-size: 180%;
     margin-left: 10%;
+    margin-right: 30px; /* Space between text and image */
 }
 
 .introduction-text h1 {
+    font-family: "Courier Prime", sans-serif;
     font-size: 400%;
     margin: 10px 0;
 }
 
+.typing {
+    border-right: 5px solid;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    animation:
+        typing 1.1s steps(6),
+        cursor .4s step-end infinite alternate;
+}
+
 .bedroom-image img {
-    background-color: aqua;
-    width: 400px;
     height: auto;
     margin-right: 10%;
 }
 
+/* Background gradient */
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
@@ -88,4 +101,23 @@ body {
         background-position: 0% 50%;
         background-color: #593C8F, #322E18;
     }
+}
+
+/* Cursor blinking */
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    
 }
