@@ -15,7 +15,7 @@ body {
     align-items: center; /* Center horizontally */
     background: linear-gradient(45deg, #593C8F, #322E18);
     background-size: 400% 400%;
-    animation: gradient 12s ease infinite;
+    animation: gradient 20s ease infinite;
     color: white;
 }
 
@@ -58,10 +58,8 @@ a {
     font-size: 20px;
 }
 
-/* Hamburger icon styles */
-.toggle_btn {
-    display: none; /* Hide by default */
-    cursor: pointer;
+.contact a:hover {
+    color: pink;
 }
 
 /* Main content Flexbox */
@@ -139,5 +137,32 @@ a {
 @keyframes typing {
     from {
         width: 0;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 1098px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .main .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px; /* Space between icons */
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .main .introduction-text {
+        margin-bottom: 20px;
+    }
+    .typing {
+        border-right: 5px solid;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing 1.3s steps(7), cursor .5s step-end infinite alternate;
     }
 }
