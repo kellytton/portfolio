@@ -11,8 +11,6 @@ body {
     overflow: auto; /* Prevent scrolling */
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center vertically */
-    align-items: center; /* Center horizontally */
     background: linear-gradient(45deg, #593C8F, #322E18);
     background-size: 400% 400%;
     animation: gradient 20s ease infinite;
