@@ -29,9 +29,26 @@ body {
     z-index: 1000; /* Ensure it stays above other content */
 }
 
+/* Main content Flexbox */
+.main {
+    display: flex;
+    justify-content: center; /* Center the main content horizontally */
+    align-items: center;
+    padding: 40px;
+    width: 100%; /* Full width */
+    flex-grow: 1;
+}
+
 .site-name h1 {
     margin-left: 20px;
     font-size: 24px;
+}
+
+/* Specific styles for projects, about, and experience pages */
+.projects-page .main,
+.about-page .main,
+.experience-page .main {
+    margin-top: 80px;
 }
 
 span {
@@ -69,16 +86,6 @@ a {
 
 .contact a:hover {
     color: pink;
-}
-
-/* Main content Flexbox */
-.main {
-    display: flex;
-    justify-content: center; /* Center the main content horizontally */
-    align-items: center;
-    padding: 40px;
-    width: 100%; /* Full width */
-    flex-grow: 1;
 }
 
 .main .contact {
@@ -206,6 +213,11 @@ a {
     display: flex;
     justify-content: center;
     padding: 20px;
+}
+
+/* This only changes this particular animation duration */
+.animate__animated.animate__bounce {
+    --animate-duration: 2s;
 }
 
 .projects-group {
