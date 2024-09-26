@@ -27,6 +27,13 @@ body {
     align-items: center;
     padding: 20px;
     z-index: 1000; /* Ensure it stays above other content */
+    background-color: transparent; /* Default transparent background */
+    transition: background-color 0.4s ease; /* Smooth background transition */
+}
+
+.navbar.scrolled {
+    background-color: rgba(40, 24, 50, 0.8); /* Slightly opaque background for readability */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for more depth */
 }
 
 /* Main content Flexbox */
@@ -37,6 +44,10 @@ body {
     padding: 40px;
     width: 100%; /* Full width */
     flex-grow: 1;
+}
+
+p {
+    font-size: 125%;
 }
 
 .site-name h1 {
@@ -65,8 +76,8 @@ span {
 /* Highlight the active tab */
 .nav-links .active {
     color: pink; /* Highlight color */
-    font-weight: bold; /* Optional: make it bold to indicate active */
-    border-bottom: 2px solid pink; /* Optional underline */
+    font-weight: bold;
+    border-bottom: 2px solid pink;
 }
 
 a {
@@ -203,7 +214,6 @@ a {
 
 
 /* Projects Page */
-
 .projects-section {
     display: flex;
     flex-direction: column;
@@ -232,8 +242,8 @@ a {
     flex-direction: column;
     border-radius: 10px;
     flex-basis: 30%; /* Controls the width of each item */
-    max-width: 85%;  /* Limits the maximum width */
-    min-width: 85%;  /* Ensures a minimum width */
+    max-width: 80%;  /* Limits the maximum width */
+    min-width: 80%;  /* Ensures a minimum width */
     margin: 15px;    /* Optional: Adds some margin between items */
     padding: 20px;
     font-size: 14px;
