@@ -9,14 +9,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link
-    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
-    rel="stylesheet"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet"/>
     <!-- favicon -->
     <link rel="icon" type="image/x-icon" href="/images/portfolio_favicon.png">
+    <!-- animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="../js/script.js" defer></script>
 </head>
-<body>
+<body class="projects-page">
     <header class="navbar">
         <div class="site-name">
             <a href="index.html">
@@ -34,65 +34,75 @@
     <main class="main">
         <div class="projects-section">
             <div class="projects-title">
-                <h1>Projects</h1>
+                <h1 class="animate__animated animate__bounce">Projects</h1>
             </div>
             <div class="projects-group">
                 <div class="project glass" id="project-1">
                     <div class="project-line">
-                        <h1 class="project-title">Rapid Unix SHell</h1>
-                        <a href="https://github.com/kellytton/RUSH-Rapid-Unix-SHell"><i class="ri-github-fill"></i></a>
+                        <h1 class="project-title">Sentiment Analyzer</h1>
                     </div>
-                    <p>I engineered a Unix shell in C to execute built-in commands (such as exit, cd, path) and facilitate external commands through child processes with the capacity for parallel command execution.
-                        The implementation contains robust output redirection functionality, enabling users to redirect command outputs to files, supporting both file overwriting and error handling for access issues.
-                    </p>
+                    <p class="project-description">During my Data and Software Engineering internship at SMX, I developed a sentiment analyzer with geospatial plotting features. This tool was designed to analyze political social media posts, classifying them into sentiments (positive, negative, or neutral).
+                        It also offered various models for analyzing the data.</p>
+                    <h3 class="project-tools">Tools: Python, AWS (Workspace, Amazon Translate), DBeaver (PostgreSQL), VADER, HuggingFace, spaCy, ReGex, etc.</h3>
                 </div>
                 <div class="project glass" id="project-2">
-                    <div class="project-line">
-                        <h1 class="project-title">RAID-Mapping</h1>
-                        <a href="https://github.com/kellytton/RAID-Mapping"><i class="ri-github-fill"></i></a>
-                    </div>
-                    <p>I developed a C program to perform RAID mapping for RAID levels 0, 1, 01, 10, 4, and 5, identifying the specific hard disk and stripe containing a queried sector, along with the disk containing
-                        a copy or parity for redundancy if required.
-                    </p>
-                </div>
-                <div class="project glass" id="project-3">
-                    <img src="" alt="">
-                    <div class="project-line">
-                        <h1 class="project-title">Facial Recognition</h1>
-                        <a href="https://github.com/kellytton/facial-recognition-machine-learning"><i class="ri-github-fill"></i></a>
-                    </div>
-                    <p>In this project, I implemented LeNet-5 CNN on Olivetti faces, benchmarking against PCA, LDA, and SVM. Analyzed performance across different test splits and visualized results with CMC curves
-                        and confusion matrices.</p>
-                </div>
-                <div class="project glass" id="project-4">
-                    <img src="" alt="">
-                    <div class="project-line">
-                        <h1 class="project-title">Matching Game</h1>
-                        <a href="https://github.com/kellytton/matching-game-2022"><i class="ri-github-fill"></i></a>
-                    </div>
-                    <p>This maching game takes place on a responsive website, which was created using HTML/CSS/JS with sounds and animations.</p>
-                </div>
-                <div class="project glass" id="project-5">
-                    <img src="" alt="">
-                    <div class="project-line">
-                        <h1 class="project-title">Facial Recognition and Text Classification</h1>
-                        <a href="https://github.com/kellytton/facial-recognition-and-text-classification"><i class="ri-github-fill"></i></a>
-                    </div>
-                    <p>Along with facial recognition tasks, I developed an RNN-based IMDB text classifier, using data augmentation and evaluating performance on a reduced dataset. Explored with various RNN setups,
-                        visualizing training/validation plots and confusion matrices.</p>
-                </div>
-                <div class="project glass" id="project-6">
                     <div class="project-line">
                         <h1 class="project-title">Purrfect Path</h1>
                         <a href="https://github.com/kellytton"><i class="ri-github-fill"></i></a>
                     </div>
-                    <p>In a team of 3, we developed a comprehensive class scheduling platform for students to search for courses, plan and create schedules, compare their courses with friends, and display their
-                        schedules and friends list on user pages. We used JavaScript for client-side operations, including password strength validation, and HTML/CSS for web page design. The backend was built using
-                        Python, Flask, SQLAlchemy for database management, and PostgreSQL for data storage.
-                    </p>
+                    <p class="project-description">In a team of 3, we developed a comprehensive class scheduling platform for students to search for courses, plan and create schedules, compare their courses with friends, and display their
+                        schedules and friends list on user pages.</p>
+                    <h3 class="project-tools">Tools: HTML/CSS/JavaScript, Python, SQLAlchemy, Flask, PostgreSQL</h3>
+                </div>
+                <div class="project glass" id="project-3">
+                    <div class="project-line">
+                        <h1 class="project-title">Rapid Unix SHell</h1>
+                        <a href="https://github.com/kellytton/RUSH-Rapid-Unix-SHell"><i class="ri-github-fill"></i></a>
+                    </div>
+                    <p class="project-description">I engineered a Unix shell in C to execute built-in commands (such as exit, cd, path) and facilitate external commands through child processes with the capacity for parallel command execution.
+                        The implementation contains robust output redirection functionality, enabling users to redirect command outputs to files, supporting both file overwriting and error handling for access issues.</p>
+                    <h3 class="project-tools">Tools: C, Linux</h3>
+                </div>
+                <div class="project glass" id="project-4">
+                    <div class="project-line">
+                        <h1 class="project-title">RAID-Mapping</h1>
+                        <a href="https://github.com/kellytton/RAID-Mapping"><i class="ri-github-fill"></i></a>
+                    </div>
+                    <p class="project-description">I developed a C program to perform RAID mapping for RAID levels 0, 1, 01, 10, 4, and 5, identifying the specific hard disk and stripe containing a queried sector, along with the disk containing
+                        a copy or parity for redundancy if required.</p>
+                    <h3 class="project-tools">Tools: C, Linux</h3>
+                </div>
+                <div class="project glass" id="project-5">
+                    <div class="project-line">
+                        <h1 class="project-title">Facial Recognition</h1>
+                        <a href="https://github.com/kellytton/facial-recognition-machine-learning"><i class="ri-github-fill"></i></a>
+                    </div>
+                    <p class="project-description">In this machine learning project, I implemented LeNet-5 CNN on Olivetti faces, benchmarking against PCA, LDA, and SVM. Analyzed performance across different test splits and visualized results with CMC curves
+                        and confusion matrices.</p>
+                    <h3 class="project-tools">Tools: Python, Google Colab, scikit-learn, NumPy, Matplotlib, Seaborn</h3>
+                </div>
+                <div class="project glass" id="project-6">
+                    <div class="project-line">
+                        <h1 class="project-title">Facial Recognition and Text Classification</h1>
+                        <a href="https://github.com/kellytton/facial-recognition-and-text-classification"><i class="ri-github-fill"></i></a>
+                    </div>
+                    <p class="project-description">For this deep learning project, I worked in a team of 3. Along with facial recognition tasks, we developed an RNN-based IMDB text classifier, using data augmentation and evaluating performance on a reduced dataset. We explored with various RNN setups,
+                        visualizing training/validation plots and confusion matrices.</p>
+                    <h3 class="project-tools">Tools: Python, Google Colab, scikit-learn, NumPy, TensorFlow, Matplotlib, Seaborn</h3>
+                </div>
+                <div class="project glass" id="project-7">
+                    <div class="project-line">
+                        <h1 class="project-title">Matching Game</h1>
+                        <a href="https://github.com/kellytton/matching-game-2022"><i class="ri-github-fill"></i></a>
+                    </div>
+                    <p class="project-description">This matching game takes place on a responsive website, which was created using HTML/CSS/JS with sounds and animations.</p>
+                    <h3 class="project-tools">Tools: HTML/CSS/JavaScript</h3>
                 </div>
             </div>
         </div>
     </main>
+    <footer class="footer">
+        <p class="copyright">&copy; 2024 Kelly Ton</p>
+    </footer>
 </body>
 </html>
