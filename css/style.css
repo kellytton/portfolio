@@ -292,27 +292,6 @@ a {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
-/* About Page */
-.about-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-}
-
-.about-avatar {
-    width: 150px;        /* Set a fixed width */
-    height: auto;        /* Keep the aspect ratio intact */
-    object-fit: cover;   /* Ensures the image covers the container without distortion */
-    border-radius: 8px;  /* Optional: adds rounded corners to the image */
-    margin-bottom: 20px; /* Adds some spacing below the image */
-}
-
-.about-intro {
-    background-color: green;
-}
-
 /* Experience Page */
 .experience-section {
     display: flex;
@@ -382,10 +361,61 @@ a {
 .languages-title, .databases-title {
     text-align: center;
     padding: 25px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(190, 92, 222, 0.8);
     font-size: 170%;
 }
 
 .languages {
     padding-bottom: 50px;
+}
+
+/* About Page */
+.about-title h1 {
+    font-family: "Courier Prime", sans-serif;
+    font-size: 400%;
+    margin: 10px 0;
+}
+
+.about-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.about-img {
+    flex-basis: 35%;          /* 35% of the width for the image */
+    display: flex;
+    justify-content: center;   /* Center the image horizontally */
+    align-items: flex-start;   /* Align the image at the top */
+    padding: 20px;             /* Optional: Add some padding */
+}
+
+.about-img img {
+    width: 100%;              /* Make the image take up the full width of the container */
+    height: auto;             /* Maintain aspect ratio */
+    max-width: 500px;         /* Optional: Limit the maximum width of the image */
+    object-fit: cover;        /* Ensures the image fits without distortion */
+    border-radius: 50%;
+}
+
+.about-group {
+    display: flex;
+    flex-direction: row;
+}
+
+.about-body {
+    flex-basis: 65%;           /* 65% of the width for the body */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-body-header {
+    padding-bottom: 20px;
+}
+
+#about-name {
+    font-size: 180%;
 }
