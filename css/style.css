@@ -359,4 +359,22 @@ a {
     max-height: 150px; /* Set a maximum height for all images to be equal */
     object-fit: contain; /* Ensures the image scales to fit within the container without distortion */
     padding-bottom: 20px;
+    transition: transform 2.0s ease; /* Smooth transition for the scale */
+}
+
+.tool:hover img {
+    animation: pulse-animation 1s infinite; /* Apply pulse animation on hover */
+}
+
+/* Keyframes for the pulse effect */
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back to original */
+    }
 }
