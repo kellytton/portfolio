@@ -260,6 +260,10 @@ a {
     font-size: 14px;
 }
 
+.project .project-tools {
+    padding-top: 15px;
+}
+
 .project-line {
     display: flex;
     justify-content: space-between;
