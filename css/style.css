@@ -316,7 +316,8 @@ a {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 10px; /* Add padding to the left and right to control outer spacing */
 }
 
 .tool {
@@ -325,17 +326,34 @@ a {
     align-items: center; /* Center content within the container */
     justify-content: center; /* Center content vertically */
     border-radius: 10px;
-    flex-basis: 30%;
+    flex-basis: 45%;
     margin: 15px;
     padding: 20px;
     font-size: 14px;
     
-    max-width: 40%;  /* Limits the maximum width */
-    min-width: 40%;  /* Ensures a minimum width */
+    max-width: 45%;  /* Limits the maximum width */
+    min-width: 45%;  /* Ensures a minimum width */
     
     height: 250px; /* Set a fixed height for all tool boxes */
     flex-grow: 1;
     flex-shrink: 1; /* Allow containers to shrink or grow proportionally */
+}
+
+/* Desktop: 3 tools per row */
+@media (min-width: 1024px) {
+    .tool {
+        flex-basis: 30%;
+        max-width: 30%; 
+        min-width: 30%; 
+    }
+}
+
+/* Media query for small screens (e.g., phones) */
+@media (max-width: 768px) {
+    .tool {
+        flex-basis: 100%; /* 1 per row */
+        max-width: 100%;
+    }
 }
 
 .tool h3 {
