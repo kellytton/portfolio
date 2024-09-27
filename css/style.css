@@ -216,6 +216,19 @@ a {
     }
 }
 
+/* Keyframes for the pulse effect */
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back to original */
+    }
+}
+
 
 /* Projects Page */
 .projects-section {
@@ -366,15 +379,13 @@ a {
     animation: pulse-animation 1s infinite; /* Apply pulse animation on hover */
 }
 
-/* Keyframes for the pulse effect */
-@keyframes pulse-animation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1); /* Scale up */
-    }
-    100% {
-        transform: scale(1); /* Scale back to original */
-    }
+.languages-title, .databases-title {
+    text-align: center;
+    padding: 25px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 25px rgba(190, 92, 222, 0.8);
+    font-size: 170%;
+}
+
+.languages {
+    padding-bottom: 50px;
 }
