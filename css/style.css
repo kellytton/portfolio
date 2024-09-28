@@ -114,6 +114,7 @@ a {
     flex-direction: column;
     justify-content: center;
     gap: 20px; /* Space between icons */
+    margin-right: 2%;
 }
 
 .contact a {
@@ -124,8 +125,9 @@ a {
 .introduction-text {
     flex: 0;
     font-size: 180%;
-    margin-left: 2%;
     margin-right: 30px; /* Space between text and image */
+    padding-bottom: 70px;
+    padding-right: 70px;
 }
 
 .introduction-text h1 {
@@ -140,6 +142,27 @@ a {
     white-space: nowrap;
     overflow: hidden;
     animation: typing 1.1s steps(6), cursor .5s step-end infinite alternate;
+}
+
+.qualifications {
+    display: flex;
+    flex-direction: column;
+}
+
+.qualifications-box {
+    padding: 20px;
+}
+
+.qualifications-box-header {
+    padding-bottom: 10px;
+}
+
+.date {
+    color:#e4b3e6;
+}
+
+.degree, .internship {
+    margin-bottom: 20px;
 }
 
 .bedroom-image img {
@@ -203,6 +226,12 @@ a {
         white-space: nowrap;
         overflow: hidden;
         animation: typing-small 1.3s steps(6), cursor .5s step-end infinite alternate;
+    }
+}
+
+@media (max-width: 1096px) {
+    .qualifications {
+        min-width: 65%;
     }
 }
 
