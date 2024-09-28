@@ -31,7 +31,6 @@ body {
     padding: 20px;
     z-index: 1000; /* Ensure it stays above other content */
     background-color: transparent; /* Default transparent background */
-    transition: background-color 0.4s ease; /* Smooth background transition */
 }
 
 .navbar.scrolled {
@@ -97,12 +96,19 @@ a {
 }
 
 .navbar a {
-    transition: all .05s ease;
+    transition: all .3s ease;
 }
 
 .navbar a:hover {
     color: pink;
     font-size: 20px;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: white;
 }
 
 .contact a:hover {
@@ -361,6 +367,37 @@ a {
 
 #about-name {
     font-size: 180%;
+}
+
+/* hamburger icon */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 74px;
+        gap: 0;
+        flex-direction: column;
+        background-color: rgba(40, 24, 50, 0.8); /* Adjust color as needed */
+        width: 100%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .nav-link {
+        margin: 16px 0;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .navbar.active {
+        background-color: rgba(40, 24, 50, 0.8); /* Your desired background color */
+    }
 }
 
 /* Background gradient */
