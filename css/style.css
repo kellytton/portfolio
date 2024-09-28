@@ -296,7 +296,10 @@ a {
 .experience-section {
     display: flex;
     flex-direction: column;
-    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 20px;
 }
 
 .experience-title {
@@ -311,48 +314,43 @@ a {
     margin: 10px 0;
 }
 
+/* Tool container styling */
 .experience-group {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 10px; /* Add padding to the left and right to control outer spacing */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 15px; /* Space between tools */
+    max-width: 1000px; /* Optional: Limit the width of the entire section */
+    width: 100%; /* Ensures it takes up full available width */
+    margin: 0 auto; /* Center the container horizontally */
 }
 
+/* Individual tool settings */
 .tool {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center content within the container */
-    justify-content: center; /* Center content vertically */
+    align-items: center;
+    justify-content: center;
     border-radius: 10px;
-    flex-basis: 45%;
-    margin: 15px;
     padding: 20px;
     font-size: 14px;
-    
-    max-width: 45%;  /* Limits the maximum width */
-    min-width: 45%;  /* Ensures a minimum width */
-    
-    height: 250px; /* Set a fixed height for all tool boxes */
-    flex-grow: 1;
-    flex-shrink: 1; /* Allow containers to shrink or grow proportionally */
+    width: calc(33.333% - 10px); /* 3 tools per row, minus the gap */
+    margin-bottom: 15px; /* Adds some space below each row */
+    height: 250px; /* Set a fixed height for uniformity */
+    box-sizing: border-box; /* Ensure padding and width are calculated correctly */
 }
 
-/* Desktop: 3 tools per row */
-@media (min-width: 1024px) {
+/* For medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
     .tool {
-        flex-basis: 30%;
-        max-width: 30%; 
-        min-width: 30%; 
+        width: calc(50% - 10px); /* 2 tools per row, minus the gap */
     }
 }
 
-/* Media query for small screens (e.g., phones) */
+/* For small screens (e.g., phones) */
 @media (max-width: 768px) {
     .tool {
-        flex-basis: 100%; /* 1 per row */
-        max-width: 100%;
+        width: 100%; /* 1 tool per row */
     }
 }
 
