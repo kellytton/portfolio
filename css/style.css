@@ -165,99 +165,6 @@ a {
     margin-bottom: 20px;
 }
 
-.bedroom-image img {
-    height: auto;
-    margin-right: 10%;
-}
-
-/* Background gradient */
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-        background-color: #593C8F, #322E18;
-    }
-    50% {
-        background-position: 100% 50%;
-        background-color: #E39FF6, #8A80E5;
-    }
-    100% {
-        background-position: 0% 50%;
-        background-color: #593C8F, #322E18;
-    }
-}
-
-/* Cursor blinking */
-@keyframes cursor {
-    50% {
-        border-color: transparent
-    }
-}
-
-/* Typing Effect */
-@keyframes typing {
-    from {
-        width: 0;
-    }
-}
-
-/* Responsiveness */
-@media (max-width: 1098px) {
-    .main {
-        display: flex;
-        flex-direction: column;
-        align-content: space-between;
-    }
-    .main .contact {
-        display: flex;
-        flex-direction: row;
-        justify-content: left;
-        gap: 20px; /* Space between icons */
-        padding: 15px;
-        margin-bottom: 20px;
-    }
-    .main .introduction-text {
-        margin-bottom: 20px;
-    }
-    
-    /* Typing Effect specific to smaller screens */
-    .typing {
-        border-right: 5px solid;
-        width: 6ch; /* Width for "kelly." */
-        white-space: nowrap;
-        overflow: hidden;
-        animation: typing-small 1.3s steps(6), cursor .5s step-end infinite alternate;
-    }
-}
-
-@media (max-width: 1096px) {
-    .qualifications {
-        min-width: 65%;
-    }
-}
-
-/* Keyframe for Typing on Small Screens */
-@keyframes typing-small {
-    from {
-        width: 0;
-    }
-    to {
-        width: 6ch; /* Matches the width of "kelly." */
-    }
-}
-
-/* Keyframes for the pulse effect */
-@keyframes pulse-animation {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.1); /* Scale up */
-    }
-    100% {
-        transform: scale(1); /* Scale back to original */
-    }
-}
-
 
 /* Projects Page */
 .projects-section {
@@ -369,20 +276,6 @@ a {
     box-sizing: border-box; /* Ensure padding and width are calculated correctly */
 }
 
-/* For medium screens (e.g., tablets) */
-@media (max-width: 1024px) {
-    .tool {
-        width: calc(50% - 10px); /* 2 tools per row, minus the gap */
-    }
-}
-
-/* For small screens (e.g., phones) */
-@media (max-width: 768px) {
-    .tool {
-        width: 100%; /* 1 tool per row */
-    }
-}
-
 .tool h3 {
     text-align: center;
 }
@@ -458,9 +351,116 @@ a {
 }
 
 .about-body-header {
-    padding-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.about-body-content {
+    padding: 20px;
 }
 
 #about-name {
     font-size: 180%;
+}
+
+/* Background gradient */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+        background-color: #593C8F, #322E18;
+    }
+    50% {
+        background-position: 100% 50%;
+        background-color: #E39FF6, #8A80E5;
+    }
+    100% {
+        background-position: 0% 50%;
+        background-color: #593C8F, #322E18;
+    }
+}
+
+/* Cursor blinking */
+@keyframes cursor {
+    50% {
+        border-color: transparent
+    }
+}
+
+/* Typing Effect */
+@keyframes typing {
+    from {
+        width: 0;
+    }
+}
+
+/* Responsiveness */
+@media (max-width: 1098px) {
+    .main {
+        display: flex;
+        flex-direction: column;
+        align-content: space-between;
+    }
+    .main .contact {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 20px; /* Space between icons */
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+    .main .introduction-text {
+        margin-bottom: 20px;
+    }
+    
+    /* Typing Effect specific to smaller screens */
+    .typing {
+        border-right: 5px solid;
+        width: 6ch; /* Width for "kelly." */
+        white-space: nowrap;
+        overflow: hidden;
+        animation: typing-small 1.3s steps(6), cursor .5s step-end infinite alternate;
+    }
+}
+
+@media (max-width: 1096px) {
+    .qualifications {
+        min-width: 65%;
+    }
+}
+
+/* Keyframe for Typing on Small Screens */
+@keyframes typing-small {
+    from {
+        width: 0;
+    }
+    to {
+        width: 6ch; /* Matches the width of "kelly." */
+    }
+}
+
+/* Keyframes for the pulse effect */
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back to original */
+    }
+}
+
+/* For medium screens (e.g., tablets) */
+@media (max-width: 1024px) {
+    .tool {
+        width: calc(50% - 10px); /* 2 tools per row, minus the gap */
+    }
+}
+
+/* For small screens (e.g., phones) */
+@media (max-width: 768px) {
+    .tool {
+        width: 100%; /* 1 tool per row */
+    }
 }
