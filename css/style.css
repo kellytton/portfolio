@@ -518,4 +518,8 @@ a {
         display: flex;
         flex-direction: column;
     }
+
+    .experience-title, .projects-title, .about-title {
+        font-size: 85%;
+    }
 }
